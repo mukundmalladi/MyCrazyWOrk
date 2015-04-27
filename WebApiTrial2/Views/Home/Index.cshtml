@@ -1,0 +1,37 @@
+﻿@section scripts {
+    @Scripts.Render("~/bundles/app")
+}
+
+<div class="page-header">
+    <h1>Person Names</h1>
+</div>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">People</h2>
+            </div>
+            <div class="panel-body">
+                <ul class="list-unstyled" data-bind="foreach: books">
+                    <li>
+                        <strong><span data-bind="text: FirstName"></span></strong>: <span data-bind="text: LastName"></span>
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    <tfoot>
+        <tr>
+            @*<td colspan="7">
+                <button data-bind="click: previousPage" class="btn"><i class="icon-step-backward"></i></button>
+                Page<label data-bind="text: currentPageIndex() + 1" class="badge"></label>
+                <button data-bind="click: nextPage" class="btn"><i class="icon-step-forward"></i></button>
+            </td>*@
+        </tr>
+    </tfoot>
+</div>
